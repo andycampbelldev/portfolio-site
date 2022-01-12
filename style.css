@@ -1,0 +1,94 @@
+/* General styles */
+p {
+    margin: 1rem 1rem 1.5rem 1rem;
+    line-height: 1.1rem;
+}
+
+button, .button-dark {
+    margin: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.button-light {
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+/* Typography */
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+/* Nav */
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 95%;
+    background-color: rgba(255,255,255,0.95);
+    transition: width 0.2s;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+nav button {
+    align-self: end;
+}
+
+nav li {
+    margin-bottom: 1rem;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 470px;
+    background: 
+        linear-gradient(180deg, rgba(255,255,255,0) 80%, rgba(255, 255, 255)),
+        center / cover no-repeat url('images/andy.jpeg');
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    text-align: right;
+    color: rgb(152, 63, 151);
+}
+
+header button {
+    align-self: start;
+}
+
+/* Content */
+main h2 {
+    text-align: center;
+}
+
+/* Footer */
+footer p {
+    font-style: italic;
+    text-align: right;
+}
