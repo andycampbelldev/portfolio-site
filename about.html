@@ -15,25 +15,32 @@
     <title>Andy Campbell | Web Developer</title>
 </head>
 <body>
-    <nav>
-        <button class="button-light toggle-nav"><i class="fas fa-times"></i></button>
-        <ul>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Contact</li>
-        </ul>
-        <div></div>
-    </nav>
     <header>
-        <button class="button-dark toggle-nav"><i class="fas fa-bars"></i></button>
+        <button id="open-nav" class="button-dark toggle-nav"><i class="fas fa-bars"></i></button>
         <h1>andy campbell</h1>
+        <nav>
+            <button id="close-nav" class="button-light toggle-nav"><i class="fas fa-times"></i></button>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div></div>
+        </nav>
     </header>
-    <main>
-        <h2>Hi, I'm Andy!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur qui quaerat vitae, aperiam, soluta, incidunt itaque maxime adipisci molestiae at quam possimus eos est ad voluptatibus quidem nisi inventore quo. Fuga eveniet repellat dolores, quasi omnis reprehenderit nihil numquam tempore perferendis hic veritatis possimus? Rem nam et ab harum natus ex odit sed aspernatur quidem eaque placeat eligendi voluptas alias iusto voluptates suscipit necessitatibus, aliquam corrupti consectetur, maiores itaque provident. Ab repellat asperiores officia quae quo, suscipit esse temporibus numquam!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur qui quaerat vitae, aperiam, soluta, incidunt itaque maxime adipisci molestiae at quam possimus eos est ad voluptatibus quidem nisi inventore quo. Fuga eveniet repellat dolores, quasi omnis reprehenderit nihil numquam tempore perferendis hic veritatis possimus? Rem nam et ab harum natus ex odit sed aspernatur quidem eaque placeat eligendi voluptas alias iusto voluptates suscipit necessitatibus, aliquam corrupti consectetur, maiores itaque provident. Ab repellat asperiores officia quae quo, suscipit esse temporibus numquam!</p>
-    </main>
+    <div id="container">
+        <main>
+            <h2>Kia Ora, I'm Andy!</h2>
+            <article>
+                <div>
+                    <p>I'm a Kiwi web developer based in Los Angeles, CA.</p>
+                    <p>I love designing and building great-looking, responsive and accessible web applications. When I'm not doing that, you'll find me hunting for vinyl, playing guitar, brewing beer, or watching The Dodgers.</p>
+                </div>
+                <img id="profile-photo" src="/images/andy.jpeg" alt="Andy Campbell">
+            </article>
+        </main>
+    </div>
     <footer>
         <p>Andy Campbell 2022</p>
     </footer>
