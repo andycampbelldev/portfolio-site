@@ -1,3 +1,25 @@
+/* Grid Layout */
+#container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 470px 1fr 2rem;
+    grid-auto-rows: auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: 1 / 1 / span 1 / span 12;
+}
+
+main {
+    grid-area: 2 / 1 / span 1 / span 12;
+}
+
+footer {
+    grid-area: 3 / 1 / span 1 / span 12;
+}
+
+
 /* General styles */
 p {
     margin: 1rem 1rem 1.5rem 1rem;
@@ -41,6 +63,10 @@ button, .button-dark {
     color: black;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .stop-scroll {
     overflow: hidden;
     height: 100%;
@@ -63,6 +89,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     margin: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 /* Nav */
@@ -99,7 +126,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 470px;
+    /* height: 470px; */
     background: 
         linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255, 255, 255) 95%),
         center / cover no-repeat url('images/andy.jpeg');
@@ -119,12 +146,21 @@ header h1 {
 }
 
 /* Content */
+main {
+    margin-bottom: 2rem;
+}
+
 main h2 {
     text-align: center;
 }
 
-main article {
+#about {
     display: flex;
+    align-items: center;
+}
+
+#about p {
+    text-align: center;
 }
 
 #profile-photo {
@@ -132,34 +168,48 @@ main article {
 }
 
 /* Footer */
-footer {
-    position: relative;
-    bottom: 0;
-    margin-top: 2rem;
-}
-
 footer p {
     font-style: italic;
     text-align: right;
     color: rgba(0, 0, 0, 0.5);
     font-size: 0.75rem;
+    margin: 0.5rem 1rem;
 }
 
 /* Desktop */
 
 @media only screen and (min-width: 560px) {
+    /* Grid Layout */
+    #container {
+        grid-template-rows: auto 1fr 2rem;
+    }
+
     header {
+        grid-area: 1 / 1 / span 1 / span 12;
+    }
+    
+    main {
+        grid-area: 2 / 2 / span 1 / span 10;
+    }
+    
+    footer {
+        grid-area: 3 / 1 / span 1 / span 12;
+    }
+
+    header {
+        
         background-image: none;
         height: auto;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
     
     nav {
         position: relative;
         flex-direction: row;
         justify-content: flex-end;
-        height: auto;
+        height: fit-content;
         width: 100%;
     }
 
@@ -174,14 +224,8 @@ footer p {
         display: none;
     }
 
-    #container {
-        max-width: 70%;
-        margin: auto;
-    }
-
     #profile-photo {
-        /* float: right; */
-        align-self: flex-start;
+        align-self: center;
         display: block;
         width: 50%;
         border-radius: 1rem;
