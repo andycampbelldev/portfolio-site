@@ -15,10 +15,21 @@ main {
     grid-area: 2 / 1 / span 1 / span 12;
 }
 
+.section-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-rows: auto;
+    width: 100%;
+}
+
+section {
+    grid-area: 1 / 1 / span 1 / span 12;
+}
+
 footer {
     grid-area: 3 / 1 / span 1 / span 12;
 }
-
 
 /* General styles */
 p {
@@ -27,7 +38,7 @@ p {
 }
 
 a {
-    color: black;
+    color: rgba(0, 0, 0, 70%);
     text-decoration: none;
 }
 
@@ -58,18 +69,26 @@ button, .button-dark {
 }
 
 .button-light {
-    border: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 70%);
     background-color: rgba(0, 0, 0, 0);
-    color: black;
+    color: rgba(0, 0, 0, 70%);
 }
 
 button:hover {
     cursor: pointer;
 }
 
-.stop-scroll {
+.no-scroll {
     overflow: hidden;
     height: 100%;
+}
+
+article {
+    margin-bottom: 1rem;
+}
+
+.wrap-group {
+    display: inline-block;
 }
 
 /* Typography */
@@ -78,18 +97,25 @@ body {
     font-size: 16px;
     font-weight: 300;
     min-height: 100vh;
+    color: rgba(0, 0, 0, 70%);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0.5rem;
     font-weight: 600;
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin: 0.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin: 1rem 0.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* Nav */
@@ -121,46 +147,95 @@ nav li {
     font-size: 1.5rem;
 }
 
+.nav-active::after {
+    position: relative;
+    content: '';
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: rgb(152, 63, 151);
+    left: 0;
+}
+
 /* Header */
 header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* height: 470px; */
     background: 
         linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255, 255, 255) 95%),
         center / cover no-repeat url('images/andy.jpeg');
-    margin-bottom: 1rem;
-}
-
-header h1 {
-    align-self: flex-end;
-    max-width: 200px;
-    text-align: right;
-    color: rgb(152, 63, 151);
-    text-shadow: white 0px 0 40px;
 }
 
 #open-nav {
     align-self: flex-start;
 }
 
+h1 {
+    align-self: flex-end;
+    max-width: 230px;
+    text-align: right;
+    color: rgb(152, 63, 151);
+    text-shadow: white 0px 0 40px;
+}
+
 /* Content */
-main {
-    margin-bottom: 2rem;
-}
 
-main h2 {
-    text-align: center;
-}
-
-#about {
+article {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+section:nth-of-type(1) {
+    margin-top: 0;
+}
+
+
+#intro-section, #tech-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tech-section {
+    flex-direction: column;
+}
+
+#tech-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* .brand-logos li { */
+#tech-section li {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin: 0 1rem 0.5rem 1rem;
+}
+
+#other-tech li {
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 #about p {
     text-align: center;
+}
+
+#intro-section .text-content {
+    max-width: 500px;
 }
 
 #profile-photo {
@@ -178,22 +253,10 @@ footer p {
 
 /* Desktop */
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 590px) {
     /* Grid Layout */
     #container {
         grid-template-rows: auto 1fr 2rem;
-    }
-
-    header {
-        grid-area: 1 / 1 / span 1 / span 12;
-    }
-    
-    main {
-        grid-area: 2 / 2 / span 1 / span 10;
-    }
-    
-    footer {
-        grid-area: 3 / 1 / span 1 / span 12;
     }
 
     header {
@@ -203,6 +266,10 @@ footer p {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    h1 {
+        text-shadow: 1px 1px 8px rgb(0 0 0 / 10%);
     }
     
     nav {
@@ -224,12 +291,34 @@ footer p {
         display: none;
     }
 
+    article {
+        padding: 0;
+    }
+
+    .section-wrapper:nth-of-type(1) {
+        background-color: rgba(152, 178, 136, 25%);
+    }
+    .section-wrapper:nth-of-type(2) {
+        background-color: rgb(255, 255, 255);
+    }
+
     #profile-photo {
         align-self: center;
         display: block;
         width: 50%;
+        max-width: 350px;
         border-radius: 1rem;
         margin: 1rem;
     }
 
+    .brand-logos li {
+        font-size: 3rem;
+    }
+
+}
+
+@media only screen and (min-width: 770px) {
+    section {
+        grid-area: 1 / 2 / span 1 / span 10;
+    }
 }
