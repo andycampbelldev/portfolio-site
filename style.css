@@ -1,10 +1,14 @@
-/* Grid Layout */
-#container {
+/* Main Grid Layout */
+#container-home, #container-main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 470px 1fr 2rem;
     grid-auto-rows: auto;
     min-height: 100vh;
+}
+
+#container-main {
+    grid-template-rows: auto 1fr 2rem;
 }
 
 header {
@@ -13,18 +17,6 @@ header {
 
 main {
     grid-area: 2 / 1 / span 1 / span 12;
-}
-
-.section-wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    grid-auto-rows: auto;
-    width: 100%;
-}
-
-section {
-    grid-area: 1 / 1 / span 1 / span 12;
 }
 
 footer {
@@ -40,22 +32,6 @@ p {
 a {
     color: rgba(0, 0, 0, 70%);
     text-decoration: none;
-}
-
-a::after {
-    position: relative;
-    content: '';
-    width: 0px;
-    height: 2px;
-    display: block;
-    background: rgb(152, 63, 151);
-    transition: 0.3s;
-    left: 50%;
-}
-  
-a:hover::after {
-    width: 100%;
-    left: 0;
 }
 
 button, .button-dark {
@@ -106,12 +82,22 @@ h1 {
     font-weight: 600;
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin: 1rem 0.5rem;
+h2, h3 {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     font-style: italic;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0.5rem;
+
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin: 1rem 0.5rem;
+
 }
 
 .text-center {
@@ -131,6 +117,23 @@ nav {
     background-color: rgba(255,255,255,0.95);
     border-radius: 0.5rem;
     transition: width 0.3s;
+    z-index: 99;
+}
+
+nav a::after {
+    position: relative;
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: rgb(152, 63, 151);
+    transition: 0.3s;
+    left: 50%;
+}
+  
+nav a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .nav-open {
@@ -165,6 +168,16 @@ header {
     background: 
         linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255, 255, 255) 95%),
         center / cover no-repeat url('images/andy.jpeg');
+    margin-bottom: 1rem;
+}
+
+header.compact {
+    /* background: rgba(152, 178, 136, 25%); */
+    background: 
+        linear-gradient(180deg, rgba(255,255,255,30%) 0%, rgba(255, 255, 255) 95%),
+        top / cover no-repeat url('images/andy.jpeg');
+    flex-direction: row;
+    margin-bottom: 1rem;
 }
 
 #open-nav {
@@ -180,23 +193,23 @@ h1 {
 }
 
 /* Content */
-
 article {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
 }
 
-section {
+.content-row {
     margin-bottom: 1rem;
+    align-self: stretch;
 }
 
 section:nth-of-type(1) {
     margin-top: 0;
 }
 
+/* Home page */
 
 #intro-section, #tech-section {
     display: flex;
@@ -216,7 +229,6 @@ section:nth-of-type(1) {
     padding: 1rem;
 }
 
-/* .brand-logos li { */
 #tech-section li {
     font-size: 2.5rem;
     display: inline-block;
@@ -230,8 +242,12 @@ section:nth-of-type(1) {
     margin-bottom: 0.5rem;
 }
 
-#about p {
+.text-content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #intro-section .text-content {
@@ -240,6 +256,48 @@ section:nth-of-type(1) {
 
 #profile-photo {
     display: none;
+}
+
+/* Project Pages */
+
+.project-wrapper {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.project-wrapper img, #project-details img {
+    width: 100%;
+}
+
+.project-image-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 70%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+    text-align: center;
+}
+  
+.project-wrapper:hover .project-image-overlay {
+    opacity: 1;
+}
+
+#project-details ul {
+    padding: 0 1rem;
+    margin: 0 1rem;
+    list-style: disc;
+    list-style-position: outside;
+}
+
+#project-details li {
+    padding: 1rem 0;
 }
 
 /* Footer */
@@ -255,17 +313,17 @@ footer p {
 
 @media only screen and (min-width: 590px) {
     /* Grid Layout */
-    #container {
+    #container-home {
         grid-template-rows: auto 1fr 2rem;
     }
 
-    header {
-        
+    header, header.compact {
         background-image: none;
         height: auto;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 0;
     }
 
     h1 {
@@ -291,14 +349,15 @@ footer p {
         display: none;
     }
 
-    article {
-        padding: 0;
+    .content-row {
+        padding: 1rem 2rem;
     }
 
-    .section-wrapper:nth-of-type(1) {
+    .content-row:nth-of-type(1) {
         background-color: rgba(152, 178, 136, 25%);
     }
-    .section-wrapper:nth-of-type(2) {
+
+    .content-row:nth-of-type(2) {
         background-color: rgb(255, 255, 255);
     }
 
@@ -311,14 +370,34 @@ footer p {
         margin: 1rem;
     }
 
-    .brand-logos li {
-        font-size: 3rem;
+    #projects-section, #project-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    #projects-section {
+        flex-direction: column;
+    }
+
+    .project-wrapper {
+        width: 45%;
+    }
+
+    .project-image-overlay {
+        opacity: 0;
+    }
+
+    .project-wrapper:hover .project-image-overlay {
+        opacity: 1;
     }
 
 }
 
 @media only screen and (min-width: 770px) {
-    section {
-        grid-area: 1 / 2 / span 1 / span 10;
+    .content-row {
+        padding: 1rem 4rem;
     }
 }

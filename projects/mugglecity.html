@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb76659413.js" crossorigin="anonymous"></script>
+    <script src="../main.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&family=Ubuntu:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Andy Campbell | Web Developer</title>
+</head>
+<body>
+    <div id="container-main">
+        <header class="compact">
+            <button id="open-nav" class="button-dark toggle-nav"><i class="fas fa-bars"></i></button>
+            <h1>andy campbell</h1>
+            <nav>
+                <button id="close-nav" class="button-light toggle-nav"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a class="nav-active" href="../projects.html">Projects</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <div></div>
+            </nav>
+        </header>
+        <main>
+            <article id="projects">
+                <section class="content-row" id="project-details">
+                    <div class="text-content">
+                        <h2>Muggle City</h2>
+                        <p>A home hub for storing and quickly accessing favorite recipes, shopping lists and other vital home info for ourselves and guests - like how to use the coffee machine.</p>     
+                    </div>
+                    <img src="/images/mugglecity-thumb.png" alt="Screenshot of Muggle City project">
+                    <ul>
+                        <li>Front-end built with vanilla HTML, CSS and JavaScript</li>
+                        <li>NodeJS and Express backend</li>
+                        <li>Simple data persistence using NodeJS file system methods and JSON file storage</li>
+                        <li>Basic CMS for creating custom pages with basic HTML and image upload to Cloudinary</li>
+                        <li>Gmail integration for emailing shopping list</li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p>Andy Campbell 2022</p>
+        </footer>
+    </div>
+</body>
+</html>

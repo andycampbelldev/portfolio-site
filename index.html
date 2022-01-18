@@ -16,7 +16,7 @@
     <title>Andy Campbell | Web Developer</title>
 </head>
 <body>
-    <div id="container">
+    <div id="container-home">
         <header>
             <button id="open-nav" class="button-dark toggle-nav"><i class="fas fa-bars"></i></button>
             <h1>andy campbell</h1>
@@ -24,65 +24,61 @@
                 <button id="close-nav" class="button-light toggle-nav"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a class="nav-active" href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
                 <div></div>
             </nav>
         </header>
         <main>
             <article id="about">
-                <div class="section-wrapper">
-                    <section id="intro-section">
-                        <div class="text-content">
-                            <h2 class="text-center">Kia ora, I'm Andy!</h2>
-                            <p>I'm a Kiwi web developer based in <span class="wrap-group">Los Angeles, CA.</span></p>
-                            <p>I love designing and building great-looking, responsive and accessible web applications. When I'm not doing that, you'll find me hunting for vinyl, playing guitar, brewing beer, or watching the Dodgers.</p>
+                <section class="content-row" id="intro-section">
+                    <div class="text-content">
+                        <h2>Kia ora, I'm Andy!</h2>
+                        <p>I'm a Kiwi web developer based in <span class="wrap-group">Los Angeles, CA.</span></p>
+                        <p>I love designing and building great-looking, responsive and accessible web applications. When I'm not doing that, you'll find me hunting for vinyl, brewing beer, or watching the Dodgers.</p>
+                    </div>
+                    <img id="profile-photo" src="/images/andy.jpeg" alt="Andy Campbell">
+                </section>
+                <section class="content-row" id="tech-section">
+                    <h2>Tech</h2>
+                    <ul>
+                        <div class="wrap-group">
+                            <li><i class="fab fa-html5" alt="HTML5"></i></li>
+                            <li><i class="fab fa-css3-alt" alt="CSS3"></i></li>
+                            <li><i class="fab fa-js" alt="JavaScript"></i></li>
                         </div>
-                        <img id="profile-photo" src="/images/andy.jpeg" alt="Andy Campbell">
-                    </section>
-                </div>
-                <div class="section-wrapper">
-                    <section id="tech-section">
-                        <h2>Tech</h2>
-                        <ul>
-                            <div class="wrap-group">
-                                <li><i class="fab fa-html5" alt="HTML5"></i></li>
-                                <li><i class="fab fa-css3-alt" alt="CSS3"></i></li>
-                                <li><i class="fab fa-js" alt="JavaScript"></i></li>
-                            </div>
-                            <div class="wrap-group">
-                                <li><i class="fab fa-react" alt="React"></i></li>
-                                <li><i class="fab fa-sass" alt="Sass"></i></li>
-                                <li><i class="fab fa-bootstrap" alt="Bootstrap"></i></li>
-                            </div>
-                            <div class="wrap-group">
-                                <li><i class="fab fa-node" alt="Node JS"></i></li>
-                                <li><i class="fab fa-linux" alt="Linux"></i></li>
-                                <li><i class="fab fa-ubuntu" alt="Ubuntu"></i></li>
-                            </div>
-                            <div class="wrap-group">
-                                <li><i class="fab fa-npm" alt="NPM"></i></li>
-                                <li><i class="fab fa-git" alt="Git"></i></li>
-                                <li><i class="fab fa-github" alt="GitHub"></i></li>
-                            </div>
-                        </ul>
-                        <ul id="other-tech">
-                            <li>
-                                <i class="fas fa-database"></i>
-                                <span>MongoDB</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-database"></i>
-                                <span>SQL</span>
-                            </li>
-                            <li>
-                                <i class="far fa-paper-plane"></i>
-                                <span>jQuery</span>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
+                        <div class="wrap-group">
+                            <li><i class="fab fa-react" alt="React"></i></li>
+                            <li><i class="fab fa-sass" alt="Sass"></i></li>
+                            <li><i class="fab fa-bootstrap" alt="Bootstrap"></i></li>
+                        </div>
+                        <div class="wrap-group">
+                            <li><i class="fab fa-node" alt="Node JS"></i></li>
+                            <li><i class="fab fa-linux" alt="Linux"></i></li>
+                            <li><i class="fab fa-ubuntu" alt="Ubuntu"></i></li>
+                        </div>
+                        <div class="wrap-group">
+                            <li><i class="fab fa-npm" alt="NPM"></i></li>
+                            <li><i class="fab fa-git" alt="Git"></i></li>
+                            <li><i class="fab fa-github" alt="GitHub"></i></li>
+                        </div>
+                    </ul>
+                    <ul id="other-tech">
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </li>
+                        <li>
+                            <i class="far fa-paper-plane"></i>
+                            <span>jQuery</span>
+                        </li>
+                    </ul>
+                </section>
             </article>
         </main>
         <footer>
