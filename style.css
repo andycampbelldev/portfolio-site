@@ -332,7 +332,23 @@ section:nth-of-type(1) {
 }
 
 .carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.carousel-controls button {
     display: none;
+    font-size: 2.5rem;
+    align-items: center;
+    padding: 0.25rem;
 }
 
 .carousel-item {
@@ -464,24 +480,8 @@ footer p {
         background-color: rgb(229 236 225);
     }
 
-    .carousel-controls {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        width: 100%;
-        z-index: 10;
-    }
-
     .carousel-controls button {
-        font-size: 2.5rem;
         display: inline-flex;
-        align-items: center;
-        padding: 0.25rem;
     }
 
 }
