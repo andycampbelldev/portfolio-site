@@ -9,6 +9,7 @@ const toggleNav = () => {
     }
 }
 
+// add event listener for nav toggle buttons
 document.querySelectorAll('.toggle-nav').forEach(button => {
     button.addEventListener('click', toggleNav);
-})
+});

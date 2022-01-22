@@ -266,7 +266,7 @@ section:nth-of-type(1) {
     margin-bottom: 1rem;
 }
 
-.project-wrapper img, #project-details img {
+.project-wrapper img {
     width: 100%;
 }
 
@@ -289,6 +289,8 @@ section:nth-of-type(1) {
     opacity: 1;
 }
 
+/* Project Detail Page */
+
 #project-details ul {
     padding: 0 1rem;
     margin: 0 1rem;
@@ -298,6 +300,60 @@ section:nth-of-type(1) {
 
 #project-details li {
     padding: 1rem 0;
+}
+
+/* Project Image Carousel */
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-controls {
+    position: relative;
+    height: 100%;
+    display: none;
+}
+
+.carousel-instructions {
+    flex-grow: 1;
+    align-self: stretch;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-style: italic;
+    opacity: 1;
+    transition: opacity 0.7s;
+}
+
+.carousel-item {
+    width: 100%;
+    height: auto;
+    transition: transform 0.7s;
+    position: absolute;
+    top: 0;
+    transform: translateX(0);
+    opacity: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+}
+
+.carousel-item.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.carousel-item.left {
+    transform: translateX(-100%);
+}
+
+.carousel-item.right {
+    transform: translateX(100%);
 }
 
 /* Footer */
@@ -392,6 +448,16 @@ footer p {
 
     .project-wrapper:hover .project-image-overlay {
         opacity: 1;
+    }
+
+    .carousel-wrapper {
+        height: 40vh;
+    }
+
+    .carousel-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
 }

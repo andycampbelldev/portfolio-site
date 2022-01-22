@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/cb76659413.js" crossorigin="anonymous"></script>
     <script src="../main.js" defer></script>
+    <!-- <script src="../carousel.js" defer></script> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,12 +38,35 @@
                         <h2>Muggle City</h2>
                         <p>A home hub for storing and quickly accessing favorite recipes, shopping lists and other vital home info for ourselves and guests - like how to use the coffee machine.</p>     
                     </div>
-                    <img src="/images/mugglecity-thumb.png" alt="Screenshot of Muggle City project">
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <div class="carousel-item">
+                                <img src="/images/mugglecity-thumb.png" alt="Screenshot of Muggle City project">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/mugglecity-thumb-2.png" alt="Screenshot of Muggle City project">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/mugglecity-thumb-3.png" alt="Screenshot of Muggle City project">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/mugglecity-thumb-4.png" alt="Screenshot of Muggle City project">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/mugglecity-thumb-5.png" alt="Screenshot of Muggle City project">
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-left"><i class="fas fa-arrow-circle-left"></i></button>
+                            <button class="carousel-right"><i class="fas fa-arrow-circle-right"></i></button>
+                        </div>
+                    </div>
+
                     <ul>
-                        <li>Front-end built with vanilla HTML, CSS and JavaScript</li>
+                        <li>Responsive front-end built with vanilla HTML, CSS and JavaScript</li>
                         <li>NodeJS and Express backend</li>
-                        <li>Simple data persistence using NodeJS file system methods and JSON file storage</li>
-                        <li>Basic CMS for creating custom pages with basic HTML and image upload to Cloudinary</li>
+                        <li>Data persistence using NodeJS file system methods and JSON file storage</li>
+                        <li>CMS for creating custom pages with HTML and image upload to Cloudinary</li>
                         <li>Gmail integration for emailing shopping list</li>
                     </ul>
                 </section>
@@ -52,5 +76,6 @@
             <p>Andy Campbell 2022</p>
         </footer>
     </div>
+    <script src="../carousel.js" defer></script>
 </body>
 </html>
