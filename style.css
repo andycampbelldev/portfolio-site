@@ -311,24 +311,24 @@ section:nth-of-type(1) {
     position: relative;
     padding: 1.5rem;
     max-width: 925px;
-    margin: auto;
-}
-
-.carousel-wrapper::before {
-    content: 'HELLO, MY NAME IS ANTONIO LASAGNA AND I AM A PSEUDO-ELEMENT. IT\'S MY JOB TO MAKE SURE YOU DON\'T SEE WHAT\'S HAPPENING BACKSTAGE ON THE CAROUSEL.';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255,255,255,1);
-    color: rgba(255,255,255,1);
-    height: 100%;
-    width: 90%;
-    z-index: 8;
+    margin: 0 auto;
 }
 
 .carousel {
     position: relative;
+    height: 100%;
+}
+
+.carousel-curtain {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,1);
+    height: 100%;
+    width: 100%;
+    z-index: 8;
 }
 
 .carousel-controls {
@@ -460,8 +460,7 @@ footer p {
         padding: 2rem;
     }
 
-    .carousel-wrapper::before {
-        color: rgb(229 236 225);
+    .carousel-curtain {
         background-color: rgb(229 236 225);
     }
 
@@ -469,10 +468,13 @@ footer p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         height: 100%;
+        width: 100%;
         z-index: 10;
-        margin: 0 -2rem;
     }
 
     .carousel-controls button {
@@ -491,14 +493,6 @@ footer p {
 
     .carousel-wrapper {
         padding: 3rem;
-    }
-
-    .carousel-wrapper::before {
-        width: 80%;
-    }
-
-    .carousel-controls {
-        margin: 0 -2.5rem;
     }
 
 }
