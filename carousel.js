@@ -17,7 +17,6 @@ const setCarouselHeight = () => {
         // get max height of all carousel items and apply this height to the carousel-wrapper
         let height = Math.max(...Array.from(carouselImages).map(el => el.clientHeight));
         document.querySelector('.carousel-wrapper').style.height = `${height}px`;
-        console.log(`carousel resized!`);
 }
 
 const advanceCarousel = (num) => {
@@ -40,7 +39,7 @@ const advanceCarousel = (num) => {
     const newActive = num > 0 ? currentRight : currentLeft;
     const newLeft = newActive - 1 >= 0 ? newActive - 1 : maxIndex;
     const newRight = newActive + 1 <= maxIndex ? newActive + 1 : 0;
-    // update classes to move slides
+    // move slides
     carouselImages[newActive].classList.add('active');
     carouselImages[newRight].classList.add('right');
     carouselImages[newLeft].classList.add('left');

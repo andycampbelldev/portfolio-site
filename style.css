@@ -306,37 +306,42 @@ section:nth-of-type(1) {
 
 .carousel-wrapper {
     overflow: hidden;
-    width: 100%;
+    position: relative;
+    padding: 1.5rem;
+}
+
+.carousel-wrapper::before {
+    content: 'HELLO, MY NAME IS ANTONIO LASAGNA AND I AM A PSEUDO-ELEMENT. IT\'S MY JOB TO MAKE SURE YOU DON\'T SEE WHAT\'S HAPPENING BACKSTAGE ON THE CAROUSEL.';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,1);
+    color: rgba(255,255,255,1);
+    height: 100%;
+    width: 90%;
+    z-index: 8;
+}
+
+.carousel {
     position: relative;
 }
 
 .carousel-controls {
     position: relative;
     height: 100%;
+    z-index: 10;
     display: none;
 }
 
-.carousel-instructions {
-    flex-grow: 1;
-    align-self: stretch;
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-style: italic;
-    opacity: 1;
-    transition: opacity 0.7s;
-}
-
 .carousel-item {
-    width: 100%;
     height: auto;
-    transition: transform 0.7s;
+    transition: transform 0.7s, opacity 0.7s;
     position: absolute;
     top: 0;
-    transform: translateX(0);
+    transform: translateX(0) scale(0.95);
     opacity: 0;
+    z-index: 0;
 }
 
 .carousel-item img {
@@ -344,16 +349,19 @@ section:nth-of-type(1) {
 }
 
 .carousel-item.active {
-    transform: translateX(0);
+    transform: translateX(0) scale(1.05);
     opacity: 1;
+    z-index: 9;
 }
 
 .carousel-item.left {
-    transform: translateX(-100%);
+    transform: translateX(-90%) scale(0.9);
+    opacity: 0.7;
 }
 
 .carousel-item.right {
-    transform: translateX(100%);
+    transform: translateX(90%) scale(0.9);
+    opacity: 0.7;
 }
 
 /* Footer */
@@ -451,7 +459,12 @@ footer p {
     }
 
     .carousel-wrapper {
-        height: 40vh;
+        padding: 2rem;
+    }
+
+    .carousel-wrapper::before {
+        color: rgb(229 236 225);
+        background-color: rgb(229 236 225);
     }
 
     .carousel-controls {
@@ -464,6 +477,10 @@ footer p {
 
 @media only screen and (min-width: 770px) {
     .content-row {
-        padding: 1rem 4rem;
+        padding: 1rem 6rem;
+    }
+
+    .carousel-wrapper {
+        padding: 3rem;
     }
 }
