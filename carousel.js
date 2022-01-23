@@ -1,14 +1,20 @@
 const initCarousel = () => {
+    setCarouselHeight();
     // get all carousel items
     const carouselImages = document.querySelectorAll('.carousel-item');
+    // find index position of last carousel item to assign as left item
+    const i = carouselImages.length - 1;
     // set the first item to be active
     carouselImages[0].classList.add('active');
-    // set the second item to be up next
-    carouselImages[1].classList.add('right');
-    // set the very last item to be the previous item if the carousel is reversed
-    const i = carouselImages.length - 1;
-    carouselImages[i].classList.add('left');
-    setCarouselHeight();
+    // short delay so that active image appears first
+    setTimeout(() => {
+        // set the second item to be up next
+        carouselImages[1].classList.add('right');
+        // set the very last item to be the previous item if the carousel is reversed
+        carouselImages[i].classList.add('left');
+        // reveal the carousel buttons
+        document.querySelector('.carousel-controls').classList.remove('carousel-controls-collapsed');
+    },500)
 }
 
 const setCarouselHeight = () => {
