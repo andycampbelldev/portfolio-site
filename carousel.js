@@ -27,9 +27,6 @@ const advanceCarousel = (num) => {
     carouselActive = true;
     // get all carousel items
     const carouselImages = document.querySelectorAll('.carousel-item');
-    // disable controls
-    const carouselButtons = document.querySelectorAll('.carousel-controls button');
-    carouselButtons.forEach(button => button.setAttribute('disabled', true));
     // get the current index positions of left, active and right carousel items
     const maxIndex = carouselImages.length - 1;
     const currentLeft = Array.prototype.indexOf.call(carouselImages, document.querySelector('.carousel-item.left'));
@@ -47,8 +44,6 @@ const advanceCarousel = (num) => {
     carouselImages[currentLeft].classList.remove('left');
     setTimeout(() => {
         carouselImages[currentActive].classList.remove('active');
-        // re-enable carousel controls
-        carouselButtons.forEach(button => button.removeAttribute('disabled'));
         // update window variable to indicate carousel not active
         carouselActive = false;
     }, 700);
@@ -88,7 +83,7 @@ const handleCarouselSwipe = evt => {
     if (!carouselActive) {
         const { xDiff, yDiff } = handleTouchUp(evt);
         // require x distance to be greater than 100px so not overly sensitive
-        if (Math.abs(xDiff) > 100) {
+        if (Math.abs(xDiff) > 50) {
             if (xDiff > 0) {
                 //left swipe
                 advanceCarousel(1)
@@ -106,12 +101,31 @@ document.querySelector('.carousel-controls').addEventListener('touchend', handle
 
 // add event listeners for carousel control buttons
 document.querySelector('.carousel-left').addEventListener('click', () => {
-    advanceCarousel(-1);
+    //focus on specific carousel-control button after initial click so that keyboard controls can be used
+    document.querySelector('.carousel-left').focus()
+    if (!carouselActive) {
+        advanceCarousel(-1);
+    }
 });
 
 document.querySelector('.carousel-right').addEventListener('click', () => {
-    advanceCarousel(1);
+    //focus on specific carousel-control button after initial click so that keyboard controls can be used
+    document.querySelector('.carousel-right').focus()
+    if (!carouselActive) {
+        advanceCarousel(1);
+    }
 });
+
+// add keydown event listener on carousel controls to allow carousel navigation with left and right keys
+document.querySelector('.carousel-controls').addEventListener('keydown', (evt) => {
+    if (!carouselActive) {
+        if (evt.key === 'ArrowRight') {
+            advanceCarousel(1);
+        } else if (evt.key === 'ArrowLeft') {
+            advanceCarousel(-1);
+        }
+    }
+})
 
 // add event listener to window to resize carousel if window size changes to ensure responsive behavior (needed for changing orientation on mobile)
 window.addEventListener('resize', setCarouselHeight);
