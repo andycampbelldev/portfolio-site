@@ -39,7 +39,7 @@ const advanceCarousel = (num) => {
     const currentActive = Array.prototype.indexOf.call(carouselImages, document.querySelector('.carousel-item.active'));
     const currentRight = Array.prototype.indexOf.call(carouselImages, document.querySelector('.carousel-item.right'));
     // determine new positions
-    const newActive = num > 0 ? currentRight : currentLeft;
+    const newActive = num > 0 ? currentLeft : currentRight;
     const newLeft = newActive - 1 >= 0 ? newActive - 1 : maxIndex;
     const newRight = newActive + 1 <= maxIndex ? newActive + 1 : 0;    
     // move slides
@@ -47,9 +47,9 @@ const advanceCarousel = (num) => {
     // incoming and outgoing control z-index. the slide moving into left or right from the deck of inactive slides must have a z-index that keeps it behind the carousel curtain.
     carouselImages[newActive].classList.add('active');
     carouselImages[newRight].classList.add('right');
-    carouselImages[newRight].classList.add(num > 0 ? 'incoming' : 'outgoing');
+    carouselImages[newRight].classList.add(num > 0 ? 'outgoing' : 'incoming');
     carouselImages[newLeft].classList.add('left');
-    carouselImages[newLeft].classList.add(num > 0 ? 'outgoing' : 'incoming');
+    carouselImages[newLeft].classList.add(num > 0 ? 'incoming' : 'outgoing');
     carouselImages[currentRight].classList.remove('right', 'outgoing', 'incoming');
     carouselImages[currentLeft].classList.remove('left', 'outgoing', 'incoming');
     setTimeout(() => {
