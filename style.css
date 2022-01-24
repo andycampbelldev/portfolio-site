@@ -29,7 +29,7 @@ p {
     line-height: 1.5rem;
 }
 
-a {
+nav a {
     color: rgba(0, 0, 0, 70%);
     text-decoration: none;
 }
@@ -326,7 +326,7 @@ section:nth-of-type(1) {
     display: block;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1.05);
     background-color: rgba(255,255,255,1);
     height: 100%;
     width: 100%;
@@ -381,10 +381,18 @@ section:nth-of-type(1) {
     z-index: 10;
 }
 
-.carousel-item.left, .carousel-item.right {
-    opacity: 0.7;
+.carousel-item.incoming {
+    z-index: 1;
+}
+
+.carousel-item.outgoing {
     z-index: 9;
 }
+
+.carousel-item.left, .carousel-item.right {
+    opacity: 0.7;
+}
+
 .carousel-item.left {
     transform: translateX(-90%) scale(0.9);
 }

@@ -41,13 +41,17 @@ const advanceCarousel = (num) => {
     // determine new positions
     const newActive = num > 0 ? currentRight : currentLeft;
     const newLeft = newActive - 1 >= 0 ? newActive - 1 : maxIndex;
-    const newRight = newActive + 1 <= maxIndex ? newActive + 1 : 0;
+    const newRight = newActive + 1 <= maxIndex ? newActive + 1 : 0;    
     // move slides
+    // classes: right and left control X axis placement
+    // incoming and outgoing control z-index. the slide moving into left or right from the deck of inactive slides must have a z-index that keeps it behind the carousel curtain.
     carouselImages[newActive].classList.add('active');
     carouselImages[newRight].classList.add('right');
+    carouselImages[newRight].classList.add(num > 0 ? 'incoming' : 'outgoing');
     carouselImages[newLeft].classList.add('left');
-    carouselImages[currentRight].classList.remove('right');
-    carouselImages[currentLeft].classList.remove('left');
+    carouselImages[newLeft].classList.add(num > 0 ? 'outgoing' : 'incoming');
+    carouselImages[currentRight].classList.remove('right', 'outgoing', 'incoming');
+    carouselImages[currentLeft].classList.remove('left', 'outgoing', 'incoming');
     setTimeout(() => {
         carouselImages[currentActive].classList.remove('active');
         // update window variable to indicate carousel not active
@@ -110,7 +114,7 @@ document.querySelector('.carousel-left').addEventListener('click', () => {
     //focus on specific carousel-control button after initial click so that keyboard controls can be used
     document.querySelector('.carousel-left').focus()
     if (!carouselActive) {
-        advanceCarousel(-1);
+        advanceCarousel(1);
     }
 });
 
@@ -118,7 +122,7 @@ document.querySelector('.carousel-right').addEventListener('click', () => {
     //focus on specific carousel-control button after initial click so that keyboard controls can be used
     document.querySelector('.carousel-right').focus()
     if (!carouselActive) {
-        advanceCarousel(1);
+        advanceCarousel(-1);
     }
 });
 
