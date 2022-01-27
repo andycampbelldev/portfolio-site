@@ -96,10 +96,10 @@ const handleCarouselSwipe = evt => {
         if (Math.abs(xDiff) > 50) {
             if (xDiff > 0) {
                 //left swipe
-                advanceCarousel(1)
+                advanceCarousel(-1)
             } else if (xDiff < 0) {
                 //right swipe
-                advanceCarousel(-1)
+                advanceCarousel(1)
             }
         } 
     }
