@@ -130,9 +130,9 @@ document.querySelector('.carousel-right').addEventListener('click', () => {
 document.querySelector('.carousel-controls').addEventListener('keydown', (evt) => {
     if (!carouselActive) {
         if (evt.key === 'ArrowRight') {
-            advanceCarousel(1);
-        } else if (evt.key === 'ArrowLeft') {
             advanceCarousel(-1);
+        } else if (evt.key === 'ArrowLeft') {
+            advanceCarousel(1);
         }
     }
 })

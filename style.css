@@ -174,10 +174,10 @@ header {
 }
 
 header.compact {
-    /* background: rgba(152, 178, 136, 25%); */
-    background: 
+    background: rgba(212, 243, 214, 50%);
+    /* background: 
         linear-gradient(180deg, rgba(255,255,255,30%) 0%, rgba(255, 255, 255) 95%),
-        top / cover no-repeat url('images/andy.jpeg');
+        top / cover no-repeat url('images/andy.jpeg'); */
     flex-direction: row;
     margin-bottom: 1rem;
 }
@@ -264,12 +264,25 @@ section:nth-of-type(1) {
 
 .project-wrapper {
     width: 100%;
+    height: 330px;
     position: relative;
     margin-bottom: 1rem;
 }
 
-.project-wrapper img {
-    width: 100%;
+#mugglecity-project-wrapper {
+    background: center / contain no-repeat url('/images/mugglecity/mugglecity-thumb.png');
+}
+
+#bruno-project-wrapper {
+    background: center / contain no-repeat url('/images/bruno/bruno-thumb.png');
+}
+
+#mugglecity-project-wrapper {
+    background: center / contain no-repeat url('/images/mugglecity/mugglecity-thumb.png');
+}
+
+#mugglecity-project-wrapper {
+    background: center / contain no-repeat url('/images/mugglecity/mugglecity-thumb.png');
 }
 
 .project-image-overlay {
@@ -380,6 +393,7 @@ section:nth-of-type(1) {
 
 .carousel-item.active {
     transform: translateX(0) scale(1.05);
+    box-shadow: 5px 5px 10px;
     width: 100%;
     opacity: 1;
     z-index: 10;
@@ -437,6 +451,7 @@ footer p {
 
     header, header.compact {
         background-image: none;
+        background: none;
         height: auto;
         flex-direction: row;
         justify-content: space-between;
@@ -514,11 +529,13 @@ footer p {
     }
 
     .project-wrapper {
-        width: 45%;
+        width: 100%;
+        height: 330px;
     }
 
     .project-image-overlay {
         opacity: 0;
+        transition: opacity 0.3s;
     }
 
     .project-wrapper:hover .project-image-overlay {
@@ -530,7 +547,7 @@ footer p {
     }
 
     .carousel-curtain {
-        background-color: rgb(229 236 225);
+        background-color: rgb(233 249 234);
     }
 
     .carousel-controls button {
