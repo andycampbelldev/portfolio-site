@@ -361,6 +361,10 @@ section:nth-of-type(1) {
 }
 
 .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     transition: transform 0.7s, opacity 0.7s;
     position: absolute;
     max-height: 550px;
@@ -398,7 +402,20 @@ section:nth-of-type(1) {
 }
 
 .carousel-item.right {
-    transform: translateX(90%) scale(0.9);
+    transform: translateX(95%) scale(0.9);
+}
+
+#mobile-screenshots {
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+    margin: 1rem auto;
+
+}
+
+#mobile-screenshots img {
+    width: 40%;
+    margin-left: -10%;
 }
 
 /* Footer */
