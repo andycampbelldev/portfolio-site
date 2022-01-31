@@ -75,7 +75,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     min-height: 100vh;
-    color: rgba(0, 0, 0, 70%);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 h1 {
@@ -87,7 +87,7 @@ h1 {
 h2, h3 {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
-    font-style: italic;
+    letter-spacing: -1px;
 }
 
 h2 {
@@ -263,45 +263,56 @@ section:nth-of-type(1) {
 /* Project Pages */
 
 .project-wrapper {
-    width: 100%;
-    height: 330px;
+    /* width: 100%; */
+    height: 50vw;
     position: relative;
     margin-bottom: 1rem;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #mugglecity-project-wrapper {
-    background: center / contain no-repeat url('/images/mugglecity/mugglecity-thumb.png');
+    background-image: url('/images/mugglecity/mugglecity-thumb.png');
 }
 
 #bruno-project-wrapper {
-    background: center / contain no-repeat url('/images/bruno/bruno-thumb.png');
+    background-image: url('/images/bruno/bruno-thumb.png');
 }
 
-#mugglecity-project-wrapper {
-    background: center / contain no-repeat url('/images/mugglecity/mugglecity-thumb.png');
+#color-palette-project-wrapper {
+    background-image: url('/images/color-palette/color-palette-thumb.png');
 }
 
-#mugglecity-project-wrapper {
-    background: center / contain no-repeat url('/images/mugglecity/mugglecity-thumb.png');
+#manilowe-project-wrapper {
+    background-image: url('/images/manilowe/manilowe-thumb.png');
 }
 
 .project-image-overlay {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 70%);
+    background-color: rgba(255, 255, 255, 80%);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     position: absolute;
-    opacity: 1;
-    transition: opacity 0.1s ease-in;
+    transition: background-color 0.3s ease-in;
     text-align: center;
 }
-  
-.project-wrapper:hover .project-image-overlay {
-    opacity: 1;
+
+.project-image-overlay:hover {
+    background-color: rgba(255, 255, 255, 70%)
+}
+
+.project-image-overlay a {
+    font-size: 4.3rem;
+    font-weight: 700;
+    margin: 1rem 0.5rem;
+    color: rgba(0,0,0,70%);
+    text-align: center;
+    text-decoration-color: rgb(152, 63, 151);
 }
 
 /* Project Detail Page */
@@ -515,30 +526,14 @@ footer p {
         transition: filter 5s;
     }
 
-    #projects-section, #project-list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
     #projects-section {
         flex-direction: column;
     }
 
     .project-wrapper {
-        width: 100%;
-        height: 330px;
-    }
-
-    .project-image-overlay {
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .project-wrapper:hover .project-image-overlay {
-        opacity: 1;
+        max-height: 330px;
+        max-width: 800px;
+        margin: 1rem auto;
     }
 
     #mobile-screenshots {
