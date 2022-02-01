@@ -1,1 +1,1 @@
-Carousel Images: Ideally sized around 1400 x 830px.
+Carousel images - must all be the same size for now.
