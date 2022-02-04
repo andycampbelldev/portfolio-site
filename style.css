@@ -273,19 +273,19 @@ section:nth-of-type(1) {
 }
 
 #mugglecity-project-wrapper {
-    background-image: url('/images/mugglecity/mugglecity-thumb.png');
+    background-image: url('/images/mugglecity/mugglecity-car-doc-show.png');
 }
 
 #bruno-project-wrapper {
-    background-image: url('/images/bruno/bruno-thumb.png');
+    background-image: url('/images/bruno/bruno-car-recipe-view.png');
 }
 
 #color-palette-project-wrapper {
-    background-image: url('/images/react-colors/react-colors-thumb.png');
+    background-image: url('/images/react-colors/react-colors-car-home.png');
 }
 
 #manilowe-project-wrapper {
-    background-image: url('/images/manilowe/manilowe-thumb.png');
+    background-image: url('/images/manilowe/manilowe-car-home.png');
 }
 
 .project-image-overlay {

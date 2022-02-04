@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb76659413.js" crossorigin="anonymous"></script>
+    <script src="../main.js" defer></script>
+    <!-- <script src="../carousel.js" defer></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&family=Ubuntu:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Andy Campbell | Web Developer</title>
+</head>
+<body>
+    <div id="container-main">
+        <header class="compact">
+            <button id="open-nav" class="button-dark toggle-nav"><i class="fas fa-bars"></i></button>
+            <h1>andy campbell</h1>
+            <nav>
+                <button id="close-nav" class="button-light toggle-nav"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a class="nav-active" href="../projects.html">Projects</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <div></div>
+            </nav>
+        </header>
+        <main>
+            <article id="projects">
+                <section class="content-row" id="project-details">
+                    <div class="text-content">
+                        <h2>Doctor Manilowe</h2>
+                        <p>
+                            Doctor Manilowe... is a weird, long story. In short, this is a website I built for a meme account centered around vegan mayonnaise. I had a lot of fun designing and building this one to fit Doctor Manilowe's back story, and I particularly enjoyed researching and trying to replicate early 2000s web design.
+                        </p>
+                        <p>
+                            Have a look through <a href="https://doctormanilowe.github.io/">Doctor Manilowe's website</a> for yourself - test your knowledge on the quiz or send Doctor Manilowe a nice message via the Contact Page!
+                        </p>
+                        <p>
+                            For the unfamiliar, here's the <a href="https://www.notion.so/naisemaste/Doctor-Manilowe-Wiki-47476c2f5a30462d91d1402d948bdc87">Doctor Manilowe Notion Wiki</a> for some much needed context!
+                        </p>
+                    </div>
+                    <div id="mobile-screenshots">
+                        <img src="/images/manilowe/manilowe-mobile-home.png" alt="Doctor Manilowe home page on an iPhone 11">
+                        <img src="/images/manilowe/manilowe-mobile-products.png" alt="Doctor Manilowe product page on an iPhone 11">
+                        <img src="/images/manilowe/manilowe-mobile-contact.png" alt="Doctor Manilowe contact page on an iPhone 11">
+                    </div>
+                    <ul>
+                        <li>2000s-inspired responsive frontend built from scratch with plain old HTML, CSS and JS</li>
+                        <li>Deployed to GitHub Pages with custom domain</li>
+                        <li>Simple quiz implemented with client-side JS</li>
+                        <li>Contact form implemented with Formspree</li>
+                    </ul>
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <div class="carousel-curtain" aria-hidden="true"></div>
+                            <div class="carousel-item">
+                                <img src="/images/manilowe/manilowe-car-home.png" alt="Screenshot of Doctor Manilowe home page at desktop resolution">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/manilowe/manilowe-car-products.png" alt="Screenshot of Doctor Manilowe products page at desktop resolution">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/manilowe/manilowe-car-contact.png" alt="Screenshot of Doctor Manilowe contact page at desktop resolution">
+                            </div>
+                        </div>
+                        <div class="carousel-controls carousel-controls-collapsed" tabindex="0">
+                            <button class="carousel-left"><i class="fas fa-arrow-circle-left"></i></button>
+                            <button class="carousel-right"><i class="fas fa-arrow-circle-right"></i></button>
+                        </div>
+                    </div>
+                    <p class="text-center">View on <a href=""><i class="fab fa-github" alt="GitHub"></i> GitHub</a></p>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p>Andy Campbell 2022</p>
+        </footer>
+    </div>
+    <script src="../carousel.js" defer></script>
+</body>
+</html>
