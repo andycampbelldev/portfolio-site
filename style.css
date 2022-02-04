@@ -140,6 +140,7 @@ nav a:hover::after {
 
 .nav-open {
     width: 95%;
+    box-shadow: 1px 0px 10px;
 }
 
 #close-nav {
