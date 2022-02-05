@@ -187,14 +187,14 @@ header {
     justify-content: space-between;
     background: 
         linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255, 255, 255) 95%),
-        center / cover no-repeat url('images/andy.jpeg');
+        center / cover no-repeat url('assets/andy.jpeg');
 }
 
 header.compact {
     background: rgba(212, 243, 214, 50%);
     /* background: 
         linear-gradient(180deg, rgba(255,255,255,30%) 0%, rgba(255, 255, 255) 95%),
-        top / cover no-repeat url('images/andy.jpeg'); */
+        top / cover no-repeat url('assets/andy.jpeg'); */
     flex-direction: row;
 }
 
@@ -293,19 +293,19 @@ section:nth-of-type(1) {
 }
 
 #mugglecity-project-wrapper {
-    background-image: url('images/mugglecity/mugglecity-car-doc-show.png');
+    background-image: url('assets/mugglecity/mugglecity-car-doc-show.png');
 }
 
 #bruno-project-wrapper {
-    background-image: url('images/bruno/bruno-car-recipe-view.png');
+    background-image: url('assets/bruno/bruno-car-recipe-view.png');
 }
 
 #color-palette-project-wrapper {
-    background-image: url('images/react-colors/react-colors-car-home.png');
+    background-image: url('assets/react-colors/react-colors-car-home.png');
 }
 
 #manilowe-project-wrapper {
-    background-image: url('images/manilowe/manilowe-car-home.png');
+    background-image: url('assets/manilowe/manilowe-car-home.png');
 }
 
 .project-image-overlay {
