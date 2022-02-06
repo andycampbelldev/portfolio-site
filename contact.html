@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb76659413.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&family=Ubuntu:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Andy Campbell | Web Developer</title>
+</head>
+<body>
+    <div id="container-main">
+        <header class="compact">
+            <button id="open-nav" class="button-dark toggle-nav"><i class="fas fa-bars"></i></button>
+            <h1>andy campbell</h1>
+            <nav>
+                <button id="close-nav" class="button-light toggle-nav"><i class="fas fa-times"></i></button>
+                <ul>
+                    <li><a href="./">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a class="nav-active" href="#">Contact</a></li>
+                </ul>
+                <div></div>
+            </nav>
+        </header>
+        <main>
+            <article id="contact">
+                <section class="content-row" id="contact-section">
+                    <div class="text-content">
+                        <h2>Contact</h2>
+                        <p>Looking for a web developer for your next project, or keen to talk homebrewing and baking? Let's do it.</p>
+                        <form id="contact-form" action="https://formspree.io/f/mlezjozb" method="POST">
+                            <label for="full-name">Full Name</label>
+                            <input name="full-name" id="full-name" type="text" required>
+                            <label for="email-address">Email Address</label>
+                            <input name="email-address" id="email-address" type="email" required>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="5"></textarea>
+                            <input type="submit" value="Send">
+                        </form>
+                        <div id="contact-external">
+                            <div class="external-link">
+                                <a href="https://www.linkedin.com/in/andy-cnz/" target="_blank">LinkedIn</a><i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="external-link">    
+                                <a href="https://github.com/andycampbelldev" target="_blank">GitHub</a><i class="fab fa-github"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p>Andy Campbell 2022</p>
+        </footer>
+    </div>
+</body>
+</html>
