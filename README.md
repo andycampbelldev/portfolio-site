@@ -1,6 +1,7 @@
 # Portfolio Site
 - Built from scratch with plain old HTML, CSS and JS (including the image carousel on the project pages - that was fun!)
 - Static web pages deployed on GitHub Pages
+- Reviewed against https://www.a11yproject.com/checklist/ for accessibility
 
 ## Planned Enhancements
 
