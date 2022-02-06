@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <script src="https://kit.fontawesome.com/cb76659413.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
+    <script src="form.js" defer></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
@@ -41,12 +42,22 @@
                     <div class="text-content">
                         <h2>Contact</h2>
                         <p>Looking for a web developer for your next project, or keen to talk homebrewing and baking? Let's do it.</p>
-                        <form id="contact-form" action="https://formspree.io/f/mlezjozb" method="POST">
-                            <label for="full-name">Full Name</label>
-                            <input name="full-name" id="full-name" type="text" required>
-                            <label for="email-address">Email Address</label>
-                            <input name="email-address" id="email-address" type="email" required>
-                            <label for="message">Message</label>
+                        <!-- <form id="contact-form" action="https://formspree.io/f/mlezjozb" method="POST"> -->
+                        <form id="contact-form" action="/form-test" method="POST">
+                            <div class="input-detail">
+                                <label for="full-name">Full Name</label>
+                                <span class="form-feedback"></span>
+                            </div>
+                            <input name="full-name" id="full-name" type="text">
+                            <div class="input-detail">
+                                <label for="email-address">Email Address</label>
+                                <span class="form-feedback"></span>
+                            </div>
+                            <input name="email-address" id="email-address" type="email">
+                            <div class="input-detail">
+                                <label for="message">Message</label>
+                                <span class="form-feedback"></span>
+                            </div>
                             <textarea name="message" id="message" rows="5"></textarea>
                             <input type="submit" value="Send">
                         </form>

@@ -502,6 +502,15 @@ input, textarea {
     font-family: 'Be Vietnam Pro', sans-serif;
     border: none;
     border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+input:not([type="submit"]) {
+    height: 2rem;
+}
+
+textarea {
+    height: 8rem;
 }
 
 input:focus, textarea:focus {
@@ -516,6 +525,25 @@ input[type="submit"] {
     color: rgb(255, 255, 255);
     font-size: 1rem;
     -webkit-appearance: none;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.invalid-input {
+    border: 2px solid rgb(194, 24, 52);
+    color: rgb(194, 24, 52);
+}
+
+.input-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-feedback {
+    color: rgb(194, 24, 52);
+    font-size: 0.875rem;
 }
 
 #contact-external {

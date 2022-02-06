@@ -28,10 +28,12 @@ if (today.getDate() === 31 && today.getMonth() === 9) {
     )
 }
 
-document.querySelector('.fa-react').addEventListener('dblclick', evt => {
-    const github = document.querySelector('.fa-github');
-    github.addEventListener('dblclick', hulkMode);
-    setTimeout(() => {
-        github.removeEventListener('dblclick', hulkMode);
-    }, 2000)
-})
+if(document.querySelector('#tech-section')) {
+    document.querySelector('.fa-react').addEventListener('dblclick', evt => {
+        const github = document.querySelector('.fa-github');
+        github.addEventListener('dblclick', hulkMode);
+        setTimeout(() => {
+            github.removeEventListener('dblclick', hulkMode);
+        }, 2000)
+    })
+}
