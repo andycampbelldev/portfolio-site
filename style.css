@@ -29,9 +29,10 @@ p {
     line-height: 1.5rem;
 }
 
-nav a {
-    color: rgba(0, 0, 0, 70%);
-    text-decoration: none;
+a {
+    color:rgba(0, 0, 0, 0.7);
+    text-decoration: underline;
+    text-decoration-color:rgb(152, 63, 151);
 }
 
 button, .button-dark {
@@ -120,6 +121,11 @@ header nav {
     border-radius: 0.5rem;
     transition: width 0.3s;
     z-index: 99;
+}
+
+nav a {
+    color: rgba(0, 0, 0, 70%);
+    text-decoration: none;
 }
 
 header nav a::after {
