@@ -25,7 +25,7 @@
         <header class="compact">
             <button id="open-nav" class="button-dark toggle-nav" aria-label="Open mobile nav"><i class="fas fa-bars"></i></button>
             <h1>andy campbell</h1>
-            <nav>
+            <nav aria-label="primary">
                 <button id="close-nav" class="button-light toggle-nav" aria-label="Close mobile nav"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="../">About</a></li>
@@ -42,10 +42,10 @@
                     <li><a href="../projects/bruno.html" aria-current="page">Bruno</a></li>
                 </ol>
             </nav>
-            <article id="projects">
-                <section class="content-row" id="project-details">
+            <article id="projects" aria-labelledby="article-title">
+                <div class="content-row" id="project-details">
                     <div class="text-content">
-                        <h2>BRUNO</h2>
+                        <h2 id="article-title">BRUNO</h2>
                         <p>
                             Consistency is the key to designing and brewing great beers. Every brewer has their own system for keeping notes, and while my trusty Excel spreadsheet served me well for many years, it wasn't great for designing new recipes and it was a pain to use on my phone.
                         </p>
@@ -61,7 +61,7 @@
                         <img src="../assets/bruno/bruno-mobile-recipe-view.png" alt="Bruno recipe view on an iPhone 11">
                         <img src="../assets/bruno/bruno-mobile-recipe-edit.png" alt="Bruno recipe edit on an iPhone 11">
                     </div>
-                    <ul>
+                    <ul aria-label="BRUNO tech overview">
                         <li>Responsive frontend built with customized Bootstrap components</li>
                         <li>NodeJS and Express backend with EJS templating</li>
                         <li>Data persistence with MongoDB and Mongoose</li>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <p class="external-link"><a href="https://github.com/andycampbelldev/bruno" target="_blank">BRUNO on GitHub</a> <i class="fab fa-github" alt="GitHub"></i></p>
-                </section>
+                </div>
             </article>
         </main>
         <footer>

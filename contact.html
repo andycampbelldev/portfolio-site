@@ -26,7 +26,7 @@
         <header class="compact">
             <button id="open-nav" class="button-dark toggle-nav" aria-label="Open mobile nav"><i class="fas fa-bars"></i></button>
             <h1>andy campbell</h1>
-            <nav>
+            <nav aria-label="primary">
                 <button id="close-nav" class="button-light toggle-nav" aria-label="Close mobile nav"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="./">About</a></li>
@@ -37,27 +37,27 @@
             </nav>
         </header>
         <main>
-            <article id="contact">
-                <section class="content-row" id="contact-section">
+            <article id="contact" aria-labelledby="article-title">
+                <div class="content-row" id="contact-section">
                     <div class="text-content">
-                        <h2>Contact</h2>
+                        <h2 id="article-title">Contact</h2>
                         <p>Looking for a web developer for your next project, or keen to talk homebrewing and baking? Let's do it.</p>
-                        <form id="contact-form" action="https://formspree.io/f/mlezjozb" method="POST">
+                        <form id="contact-form" action="https://formspree.io/f/mlezjozb" method="POST" aria-labelledby="article-title">
                             <div class="input-detail">
                                 <label for="full-name">Full Name</label>
-                                <span class="form-feedback"></span>
+                                <span id="name-error" class="form-feedback"></span>
                             </div>
-                            <input name="full-name" id="full-name" type="text">
+                            <input name="full-name" id="full-name" type="text" aria-invalid="false" aria-errormessage="name-error">
                             <div class="input-detail">
                                 <label for="email-address">Email Address</label>
-                                <span class="form-feedback"></span>
+                                <span id="email-error" class="form-feedback"></span>
                             </div>
-                            <input name="email-address" id="email-address" type="email">
+                            <input name="email-address" id="email-address" type="email" aria-invalid="false" aria-errormessage="email-error">
                             <div class="input-detail">
                                 <label for="message">Message</label>
-                                <span class="form-feedback"></span>
+                                <span id="message-error" class="form-feedback"></span>
                             </div>
-                            <textarea name="message" id="message" rows="5"></textarea>
+                            <textarea name="message" id="message" rows="5" aria-invalid="false" aria-errormessage="message-error"></textarea>
                             <input type="submit" value="Send">
                         </form>
                         <div id="contact-external">
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </article>
         </main>
         <footer>

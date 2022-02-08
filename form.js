@@ -22,10 +22,11 @@ const validateLength = str => {
 }
 
 const validateInput = (key, el, fn, msg) => {
+    const feedback = el.previousElementSibling.querySelector('.form-feedback');
     formState[key].valid = fn(el.value);
     formState[key].error = !formState[key].valid;
-    formState[key].valid ? el.classList.remove('invalid-input') && validateAll() : el.classList.add('invalid-input');
-    const feedback = el.previousElementSibling.querySelector('.form-feedback');
+    formState[key].valid ? el.classList.remove('invalid-input') : el.classList.add('invalid-input');
+    el.setAttribute('aria-invalid', formState[key].valid ? false : true);
     feedback.innerText = formState[key].valid ? '' : msg;
 }
 

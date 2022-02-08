@@ -25,7 +25,7 @@
         <header class="compact">
             <button id="open-nav" class="button-dark toggle-nav" aria-label="Open mobile nav"><i class="fas fa-bars"></i></button>
             <h1>andy campbell</h1>
-            <nav>
+            <nav aria-label="primary">
                 <button id="close-nav" class="button-light toggle-nav" aria-label="Close mobile nav"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="../">About</a></li>
@@ -42,10 +42,10 @@
                     <li><a href="../projects/doctor-manilowe.html" aria-current="page">Doctor Manilowe</a></li>
                 </ol>
             </nav>
-            <article id="projects">
-                <section class="content-row" id="project-details">
+            <article id="projects" aria-labelledby="article-title">
+                <div class="content-row" id="project-details">
                     <div class="text-content">
-                        <h2>Doctor Manilowe</h2>
+                        <h2 id="article-title">Doctor Manilowe</h2>
                         <p>
                             This is a site I built for a social media meme account. I had a lot of fun designing and building this one to fit Doctor Manilowe's back story, and I particularly enjoyed researching and trying to replicate early 2000s web design while ensuring the site was still fully responsive.
                         </p>
@@ -55,7 +55,7 @@
                         <img src="../assets/manilowe/manilowe-mobile-products.png" alt="Doctor Manilowe product page on an iPhone 11">
                         <img src="../assets/manilowe/manilowe-mobile-contact.png" alt="Doctor Manilowe contact page on an iPhone 11">
                     </div>
-                    <ul>
+                    <ul aria-label="Doctor Manilowe tech overview">
                         <li>2000s-inspired responsive frontend built from scratch with plain old HTML, CSS and JS</li>
                         <li>Deployed to GitHub Pages with custom domain</li>
                         <li>Simple quiz implemented with client-side JS</li>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <p class="external-link"><a href="https://doctormanilowe.github.io/" target="_blank">Doctor Manilowe's website</a></p>
-                </section>
+                </div>
             </article>
         </main>
         <footer>

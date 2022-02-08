@@ -25,7 +25,7 @@
         <header>
             <button id="open-nav" class="button-dark toggle-nav" aria-label="Open mobile nav"><i class="fas fa-bars"></i></button>
             <h1>andy campbell</h1>
-            <nav>
+            <nav aria-label="primary">
                 <button id="close-nav" class="button-light toggle-nav" aria-label="Close mobile nav"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a class="nav-active" href="#">About</a></li>
@@ -37,9 +37,9 @@
         </header>
         <main>
             <article id="about" aria-label="About Andy">
-                <section class="content-row" id="intro-section">
+                <section class="content-row" id="intro-section" aria-labelledby="first-section-title">
                     <div class="text-content">
-                        <h2>Kia ora, I'm Andy!</h2>
+                        <h2 id="first-section-title">Kia ora, I'm Andy!</h2>
                         <p>I'm a Kiwi web developer based in <span class="wrap-group">Los Angeles, CA.</span></p>
                         <p>I love designing and building beautiful, responsive and accessible web applications. When I'm not doing that, I'm hunting for vinyl, brewing beer, and baking.</p>
                     </div>
@@ -47,9 +47,9 @@
                         <img id="profile-photo" src="assets/andy.jpeg" alt="Andy Campbell">
                     </div>
                 </section>
-                <section class="content-row" id="tech-section">
-                    <h2>Tech</h2>
-                    <ul>
+                <section class="content-row" id="tech-section" aria-labelledby="second-section-title">
+                    <h2 id="second-section-title">Tech</h2>
+                    <ul aria-label="Tech with icon">
                         <li aria-label="HTML5"><i class="fab fa-html5"></i></li>
                         <li aria-label="CSS3"><i class="fab fa-css3-alt"></i></li>
                         <li aria-label="JavaScript"><i class="fab fa-js"></i></li>
@@ -63,7 +63,7 @@
                         <li aria-label="Git"><i class="fab fa-git"></i></li>
                         <li aria-label="GitHub"><i class="fab fa-github"></i></li>
                     </ul>
-                    <ul id="other-tech">
+                    <ul id="other-tech" aria-label="Tech without icons">
                         <li>
                             <i class="fas fa-database"></i>
                             <span>MongoDB</span>

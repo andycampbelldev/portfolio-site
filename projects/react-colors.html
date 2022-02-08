@@ -25,7 +25,7 @@
         <header class="compact">
             <button id="open-nav" class="button-dark toggle-nav" aria-label="Open mobile nav"><i class="fas fa-bars"></i></button>
             <h1>andy campbell</h1>
-            <nav>
+            <nav aria-label="primary">
                 <button id="close-nav" class="button-light toggle-nav" aria-label="Close mobile nav"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="../">About</a></li>
@@ -42,10 +42,10 @@
                     <li><a href="../projects/react-colors.html" aria-current="page">React Colors</a></li>
                 </ol>
             </nav>
-            <article id="projects">
-                <section class="content-row" id="project-details">
+            <article id="projects" aria-labelledby="article-title">
+                <div class="content-row" id="project-details">
                     <div class="text-content">
-                        <h2>React Colors</h2>
+                        <h2 id="article-title">React Colors</h2>
                         <p>
                             The React Colors app was a guided portfolio project completed as part of <a href="https://www.udemy.com/course/modern-react-bootcamp/" target="_blank">Colt Steele's Modern React Bootcamp on Udemy</a>. The curriculum included React basics and design patterns, hooks, state management (useReducer + useContext), React Router, component styling with JSS, component libraries like Material UI and  Bootstrap, server-side rendering with Next.js, and some Webpack basics. Much of this knowledge was applied in building this application for creating color palettes.
                         </p>
@@ -58,7 +58,7 @@
                         <img src="../assets/react-colors/react-colors-mobile-palette-view.png" alt="React Colors palette view on an iPhone 11">
                         <img src="../assets/react-colors/react-colors-mobile-shades-view.png" alt="React Colors shade view on an iPhone 11">
                     </div>
-                    <ul>
+                    <ul aria-label="React Colors tech overview">
                         <li>Bootstrapped with create-react-app</li>
                         <li>Responsive React frontend built with custom components, Material UI, and custom JSS styling</li>
                         <li>React Router with react-transition-group for transitions between routes</li>
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <p class="external-link"><a href="https://github.com/andycampbelldev/react-colors" target="_blank">React Colors on GitHub</a> <i class="fab fa-github" alt="GitHub"></i></p>
-                </section>
+                </div>
             </article>
         </main>
         <footer>

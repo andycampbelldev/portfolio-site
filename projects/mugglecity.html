@@ -25,7 +25,7 @@
         <header class="compact">
             <button id="open-nav" class="button-dark toggle-nav" aria-label="Open mobile nav"><i class="fas fa-bars"></i></button>
             <h1>andy campbell</h1>
-            <nav>
+            <nav aria-label="primary">
                 <button id="close-nav" class="button-light toggle-nav" aria-label="Close mobile nav"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="../">About</a></li>
@@ -42,10 +42,10 @@
                     <li><a href="../projects/mugglecity.html" aria-current="page">Muggle City</a></li>
                 </ol>
             </nav>
-            <article id="projects">
-                <section class="content-row" id="project-details">
+            <article id="projects" aria-labelledby="article-title">
+                <div class="content-row" id="project-details">
                     <div class="text-content">
-                        <h2>Muggle City</h2>
+                        <h2 id="article-title">Muggle City</h2>
                         <p>One of my first self-guided projects. A home hub for storing and quickly accessing favorite recipes, shopping lists and other vital home info for ourselves and guests - like how to use the coffee machine.</p>     
                     </div>
                     <div id="mobile-screenshots">
@@ -53,7 +53,7 @@
                         <img src="../assets/mugglecity/mugglecity-mobile-shopping.png" alt="Muggle City shopping list on an iPhone 11">
                         <img src="../assets/mugglecity/mugglecity-mobile-custom.png" alt="Muggle City custom content page on an iPhone 11">
                     </div>
-                    <ul>
+                    <ul aria-label="Muggle City tech overview">
                         <li>Responsive frontend built with plain old HTML, CSS and JavaScript</li>
                         <li>Server-side EJS templating</li>
                         <li>NodeJS and Express backend</li>
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <p class="external-link"><a href="https://github.com/andycampbelldev/mugglecity" target="_blank">Muggle City on GitHub</a> <i class="fab fa-github" alt="GitHub"></i></p>
-                </section>
+                </div>
             </article>
         </main>
         <footer>

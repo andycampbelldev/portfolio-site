@@ -25,7 +25,7 @@
         <header class="compact">
             <button id="open-nav" class="button-dark toggle-nav" aria-label="Open mobile nav"><i class="fas fa-bars"></i></button>
             <h1>andy campbell</h1>
-            <nav>
+            <nav aria-label="primary">
                 <button id="close-nav" class="button-light toggle-nav" aria-label="Close mobile nav"><i class="fas fa-times"></i></button>
                 <ul>
                     <li><a href="./">About</a></li>
@@ -36,11 +36,11 @@
             </nav>
         </header>
         <main>
-            <article id="projects">
-                <section class="content-row" id="projects-section">
+            <article id="projects" aria-labelledby="article-title">
+                <div class="content-row" id="projects-section">
                     <div class="text-content">
-                        <h2>Projects</h2>
-                        <p>Check out some of my past and present projects!</p>     
+                        <h2 id="article-title">Projects</h2>
+                        <p>Some of my past and present projects:</p>     
                     </div>
                     <div id="project-list">
                         <div id="mugglecity-project-wrapper" class="project-wrapper">
@@ -77,7 +77,7 @@
                     </div>
                     
 
-                </section>
+                </div>
             </article>
         </main>
         <footer>
