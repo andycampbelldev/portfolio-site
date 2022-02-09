@@ -1,7 +1,7 @@
 //trap focus within header nav when nav open on mobile
 const trapFocusNav = (trapping) => {
     const nav = document.querySelector('header nav');
-    const focusable = document.querySelectorAll('a, button, input, .carousel-controls');
+    const focusable = document.querySelectorAll('a, button, input, textarea, .carousel-controls');
     for (let el of focusable) {
         if (!nav.contains(el) && trapping) {
             el.tabIndex = "-1"
