@@ -1,11 +1,32 @@
+//trap focus within header nav when nav open on mobile
+const trapFocusNav = (trapping) => {
+    const nav = document.querySelector('header nav');
+    const focusable = document.querySelectorAll('a, button, input, .carousel-controls');
+    for (let el of focusable) {
+        if (!nav.contains(el) && trapping) {
+            el.tabIndex = "-1"
+        } else if (!nav.contains(el) && !trapping) {
+            el.classList.contains('carousel-controls') ? el.tabIndex="0" : el.removeAttribute('tabindex');
+        }
+    }
+}
+
 const toggleNav = () => {
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector('header nav');
     if (nav.offsetWidth) {
         nav.classList.remove('nav-open');
         document.body.classList.remove('no-scroll');
+        setTimeout(() => {
+            nav.classList.add('nav-display-override');
+            trapFocusNav(false);
+        },300)
     } else {
-        nav.classList.add('nav-open');
-        document.body.classList.add('no-scroll');
+        nav.classList.remove('nav-display-override');
+        trapFocusNav(true);
+        setTimeout(() => {
+            nav.classList.add('nav-open');
+            document.body.classList.add('no-scroll');
+        }, 0)
     }
 }
 
