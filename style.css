@@ -29,6 +29,15 @@ p {
     line-height: 1.5rem;
 }
 
+.lead-text {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 a {
     color:rgba(0, 0, 0, 0.7);
     text-decoration: underline;
@@ -81,6 +90,13 @@ article {
     font-size: 2.5rem;
 }
 
+.visually-hidden {
+    height: 0;
+    width: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
 /* Typography */
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -90,22 +106,26 @@ body {
     color: rgba(0, 0, 0, 0.7);
 }
 
-h1 {
+#site-title {
     font-size: 3rem;
     margin: 0.5rem;
     font-weight: 600;
 }
 
-h2, h3 {
+h1, h2, h3 {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     letter-spacing: -1px;
 }
 
+h1 {
+    font-size: 2.2rem;
+    margin: 1rem 0.5rem;
+}
+
 h2 {
     font-size: 1.8rem;
     margin: 1rem 0.5rem;
-
 }
 
 h3 {
@@ -219,17 +239,18 @@ header.compact {
     flex-direction: row;
 }
 
-#open-nav {
-    align-self: flex-start;
-}
-
-h1 {
+#site-title {
     align-self: flex-end;
     max-width: 230px;
     text-align: right;
     color: rgb(152, 63, 151);
     text-shadow: white 0px 0 40px;
 }
+
+#open-nav {
+    align-self: flex-start;
+}
+
 
 /* Content */
 article {
