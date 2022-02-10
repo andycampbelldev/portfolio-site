@@ -616,6 +616,10 @@ footer p {
         width: 100%;
     }
 
+    .nav-open {
+        box-shadow: none;
+    }
+
     .nav-display-override {
         display: flex;
     }
