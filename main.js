@@ -11,6 +11,8 @@ const trapFocusNav = (trapping) => {
     }
 }
 
+const reduceMotion = window.matchMedia("(prefers-reduced-motion");
+const navTransitionDuration = reduceMotion ? 1000 : 300;
 const toggleNav = () => {
     const nav = document.querySelector('header nav');
     if (nav.offsetWidth) {
@@ -19,7 +21,7 @@ const toggleNav = () => {
         setTimeout(() => {
             nav.classList.add('nav-display-override');
             trapFocusNav(false);
-        },300)
+        },navTransitionDuration)
     } else {
         nav.classList.remove('nav-display-override');
         trapFocusNav(true);

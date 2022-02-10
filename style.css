@@ -152,6 +152,7 @@ header nav {
     border-radius: 0.5rem;
     transition: width 0.3s;
     z-index: 99;
+    overflow: hidden;
 }
 
 .nav-open {
@@ -729,3 +730,18 @@ footer p {
     }
 
 }
+
+@media (prefers-reduced-motion) {
+    header nav a::after, .project-image-overlay, .carousel-wrapper, .carousel-controls, #profile-photo {
+        transition: none;
+    }
+
+    header nav {
+        transition-duration: 1s;
+    }
+
+    .carousel-item {
+        transition-duration: 2s;
+    }
+
+  }

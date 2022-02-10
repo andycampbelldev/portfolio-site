@@ -25,6 +25,7 @@ const setCarouselHeight = () => {
         document.querySelector('.carousel-wrapper').style.height = `${height}px`;
 }
 
+const carouselTransitionDuration = reduceMotion ? 2000 : 700;
 const advanceCarousel = (num) => {
     if (num != -1 && num != 1) {
         return 'Invalid argument. Valid arguments are -1 to reverse the carousel or 1 to advance';
@@ -56,7 +57,7 @@ const advanceCarousel = (num) => {
         carouselImages[currentActive].classList.remove('active');
         // update window variable to indicate carousel not active
         carouselActive = false;
-    }, 700);
+    }, carouselTransitionDuration);
 }
 
 // swipe gestures for mobile carousel - modified from https://stackoverflow.com/a/23230280
