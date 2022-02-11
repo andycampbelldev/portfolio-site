@@ -109,6 +109,11 @@ const handleCarouselSwipe = evt => {
 // add event handlers for carousel horizontal swipe gestures
 document.querySelector('.carousel-controls').addEventListener('touchstart', handleTouchDown, false);
 document.querySelector('.carousel-controls').addEventListener('touchend', handleCarouselSwipe, false);
+// add event listener to prevent vertical scrolling while swiping horizontally on the carousel controls
+document.querySelector('.carousel-controls').addEventListener('touchmove', e => {
+    e.preventDefault();
+    e.stopPropagation();
+}, false);
 
 // add event listeners for carousel control buttons
 document.querySelector('.carousel-left').addEventListener('click', () => {
