@@ -71,8 +71,7 @@ button:hover {
 }
 
 .no-scroll {
-    overflow: hidden;
-    height: 100%;
+    position: fixed;
 }
 
 article {
