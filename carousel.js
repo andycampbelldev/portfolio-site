@@ -141,4 +141,5 @@ document.querySelector('.carousel-controls').addEventListener('keydown', (evt) =
 // add event listener to window to resize carousel if window size changes to ensure responsive behavior (needed for changing orientation on mobile)
 window.addEventListener('resize', setCarouselHeight);
 
-initCarousel();
+// initialize after short delay to increase likelihood that max image height is available
+setTimeout(initCarousel, 1000);
