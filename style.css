@@ -282,8 +282,20 @@ section:nth-of-type(1) {
 
 /* Home page */
 
+.text-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #intro-section {
     padding-top: 1rem;
+}
+
+#intro-section .text-content {
+    max-width: 500px;
 }
 
 #intro-section, #tech-section {
@@ -315,19 +327,6 @@ section:nth-of-type(1) {
     display: block;
     text-align: center;
     margin-bottom: 0.5rem;
-}
-
-.text-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-content {
-    max-width: 500px;
-    margin: auto;
 }
 
 #profile-photo-border {
