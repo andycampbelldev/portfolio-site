@@ -633,6 +633,10 @@ footer p {
         box-shadow: none;
     }
 
+    .no-scroll {
+        position: unset;
+    }
+
     .nav-display-override {
         display: flex;
     }
