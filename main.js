@@ -11,7 +11,7 @@ const trapFocusNav = (trapping) => {
     }
 }
 
-const reduceMotion = window.matchMedia("(prefers-reduced-motion");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion").matches;
 const navTransitionDuration = reduceMotion ? 1000 : 300;
 const toggleNav = () => {
     const nav = document.querySelector('header nav');
