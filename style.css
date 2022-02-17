@@ -24,6 +24,11 @@ footer {
 }
 
 /* General styles */
+body {
+    background-color: #00051a;
+    color: #e1dfdf;
+}
+
 p {
     margin: 1rem 1rem 1.5rem 1rem;
     line-height: 1.5rem;
@@ -38,14 +43,14 @@ p {
 }
 
 a {
-    color:rgba(0, 0, 0, 0.7);
+    color: #e1dfdf;
     text-decoration: underline;
-    text-decoration-color:rgb(152, 63, 151);
+    text-decoration-color:#cf54cd;
     transition: text-decoration-color 0.3s;
 }
 
 a:hover {
-    text-decoration-color: rgb(207, 84, 205);
+    text-decoration-color: #ff00fb;
 }
 
 button, .button-dark {
@@ -53,7 +58,7 @@ button, .button-dark {
     padding: 0.25rem 0.5rem;
     font-size: 1.5rem;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: #e1dfdf;
     border: none;
     border-radius: 0.25rem;
     display: inline-flex;
@@ -61,9 +66,9 @@ button, .button-dark {
 }
 
 .button-light {
-    border: 2px solid rgba(0, 0, 0, 70%);
+    /* border: 2px solid #e1dfdf; */
     background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 70%);
+    color: #e1dfdf;
 }
 
 button:hover {
@@ -108,13 +113,6 @@ body {
     font-size: 16px;
     font-weight: 300;
     min-height: 100vh;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-#site-title {
-    font-size: 3rem;
-    margin: 0.5rem;
-    font-weight: 600;
 }
 
 h1, h2, h3 {
@@ -153,7 +151,7 @@ header nav {
     height: 100vh;
     width: 95%;
     transform: translateX(-100%);
-    background-color: rgba(255,255,255,0.95);
+    background-color: rgba(0, 5, 26, 0.95);
     border-radius: 0.5rem;
     transition: transform 0.3s;
     z-index: 99;
@@ -162,7 +160,7 @@ header nav {
 
 .nav-open {
     transform: translateX(0);
-    box-shadow: 1px 0px 10px;
+    box-shadow: #000000 1px 0px 10px;
 }
 
 .nav-display-override {
@@ -170,7 +168,7 @@ header nav {
 }
 
 nav a {
-    color: rgba(0, 0, 0, 70%);
+    color: #e1dfdf;
     text-decoration: none;
 }
 
@@ -180,7 +178,7 @@ header nav a::after {
     width: 0px;
     height: 2px;
     display: block;
-    background: rgb(207, 84, 205);
+    background: #ff00fb;
     transition: 0.3s;
     left: 50%;
 }
@@ -206,7 +204,7 @@ header nav li {
     width: 100%;
     height: 2px;
     display: block;
-    background: rgb(152, 63, 151);
+    background: #cf54cd;
     left: 0;
 }
 
@@ -224,12 +222,12 @@ header nav li {
 
 #breadcrumb a {
     text-decoration: underline;
-    text-decoration-color:rgb(152, 63, 151);
+    text-decoration-color:#cf54cd;
     transition: text-decoration-color 0.3s;
 }
 
 #breadcrumb a:hover {
-    text-decoration-color: rgb(207, 84, 205);
+    text-decoration-color: #ff00fb;
 }
 
 /* Header */
@@ -238,15 +236,12 @@ header {
     flex-direction: column;
     justify-content: space-between;
     background: 
-        linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255, 255, 255) 95%),
+        linear-gradient(180deg, rgba(0, 5, 26,10%) 60%, rgb(0, 5, 26) 95%),
         center / cover no-repeat url('assets/andy.jpeg');
 }
 
 header.compact {
-    background: rgba(212, 243, 214, 50%);
-    /* background: 
-        linear-gradient(180deg, rgba(255,255,255,30%) 0%, rgba(255, 255, 255) 95%),
-        top / cover no-repeat url('assets/andy.jpeg'); */
+    background: #00051a;
     flex-direction: row;
 }
 
@@ -254,8 +249,11 @@ header.compact {
     align-self: flex-end;
     max-width: 230px;
     text-align: right;
-    color: rgb(152, 63, 151);
-    text-shadow: white 0px 0 40px;
+    color: #cf54cd;
+    font-size: 3rem;
+    margin: 0.5rem;
+    font-weight: 600;
+    text-shadow: #00051a 0 0 40px;
 }
 
 #open-nav {
@@ -365,7 +363,7 @@ section:nth-of-type(1) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 70%);
+    background-color: rgba(0, 5, 26, 70%);
     top: 0;
     left: 0;
     width: 100%;
@@ -375,16 +373,16 @@ section:nth-of-type(1) {
 }
 
 .project-image-overlay a:hover {
-    text-decoration-color: rgb(207, 84, 205);
+    text-decoration-color: #ff00fb;
 }
 
 .project-image-overlay a {
     font-size: 4.3rem;
     font-weight: 700;
     margin: 1rem 0.5rem;
-    color: rgba(0,0,0,70%);
+    color: rgba(225, 223, 223, 70%);
     text-align: center;
-    text-decoration-color: rgb(152, 63, 151);
+    text-decoration-color: #cf54cd;
 }
 
 /* Project Detail Page */
@@ -423,7 +421,7 @@ section:nth-of-type(1) {
     top: 0;
     left: 50%;
     transform: translateX(-50%) scale(1.05);
-    background-color: rgba(255,255,255,1);
+    background-color: #00051a;
     height: 100%;
     width: 100%;
     z-index: 8;
@@ -476,7 +474,7 @@ section:nth-of-type(1) {
 
 .carousel-item.active {
     transform: translateX(0) scale(1.05);
-    box-shadow: 5px 5px 10px;
+    box-shadow: #000000 5px 5px 10px;
     width: 100%;
     opacity: 1;
     z-index: 10;
@@ -521,7 +519,6 @@ section:nth-of-type(1) {
     box-sizing: border-box;
     padding: 1rem;
     width: 100%;
-    background-color: rgb(245, 245, 245);
     margin-bottom: 1rem;
 }
 
@@ -549,14 +546,14 @@ textarea {
 
 input:not([type="submit"]):focus, textarea:focus {
     outline: none;
-    border: 2px solid rgb(152, 63, 151);
+    border: 2px solid #cf54cd;
 }
 
 input[type="submit"] {
     align-self: center;
     padding: 0.5rem 2.5rem;
-    background-color: rgb(152, 63, 151);
-    color: rgb(255, 255, 255);
+    background-color: #cf54cd;
+    color: #e1dfdf;
     font-size: 1rem;
     transition: background-color 0.3s;
     -webkit-appearance: none;
@@ -564,7 +561,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     cursor: pointer;
-    background-color: rgb(207, 84, 205);
+    background-color: #ff00fb;
 }
 
 .invalid-input {
@@ -596,7 +593,6 @@ input[type="submit"]:hover {
 footer p {
     font-style: italic;
     text-align: right;
-    color: rgba(0, 0, 0, 0.5);
     font-size: 0.75rem;
     margin: 0.5rem 1rem;
 }
@@ -656,13 +652,8 @@ footer p {
         padding: 1rem 2rem;
     }
 
-    .content-row:nth-of-type(1), #breadcrumb {
-        /* background-color: rgba(152, 178, 136, 25%); */
-        background-color: rgba(212, 243, 214, 50%);
-    }
-
-    .content-row:nth-of-type(2) {
-        background-color: rgb(255, 255, 255);
+    .content-row, #breadcrumb {
+        background-color: #00051a
     }
 
     #intro-section .text-content {
@@ -676,7 +667,7 @@ footer p {
         max-width: 350px;
         padding: 0.5rem;
         transform: rotate(-2deg);
-        background-color: white;
+        background-color: #e1dfdf;
         position: relative;
         margin-left: 1rem;
         overflow: hidden;
@@ -707,10 +698,6 @@ footer p {
         padding: 2rem;
     }
 
-    .carousel-curtain {
-        background-color: rgb(233 249 234);
-    }
-
     .carousel-controls button {
         display: inline-flex;
     }
@@ -721,8 +708,9 @@ footer p {
         margin: 0 auto;
     }
 
-    #contact-form {
-        background-color: rgb(233 249 234);
+    #contact-section .text-content {
+        width: 50%;
+        margin: auto;
     }
 
     input, textarea {
