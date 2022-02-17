@@ -380,7 +380,7 @@ section:nth-of-type(1) {
     font-size: 4.3rem;
     font-weight: 700;
     margin: 1rem 0.5rem;
-    color: rgba(225, 223, 223, 70%);
+    color: rgba(225, 223, 223, 85%);
     text-align: center;
     text-decoration-color: #ff4376;
 }
