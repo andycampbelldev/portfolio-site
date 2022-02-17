@@ -25,6 +25,7 @@ footer {
 
 /* General styles */
 body {
+    width: 100%;
     background-color: #00051a;
     color: #e1dfdf;
 }
