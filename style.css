@@ -45,12 +45,12 @@ p {
 a {
     color: #e1dfdf;
     text-decoration: underline;
-    text-decoration-color:#cf54cd;
+    text-decoration-color:#ff4376;
     transition: text-decoration-color 0.3s;
 }
 
 a:hover {
-    text-decoration-color: #ff00fb;
+    text-decoration-color: #ff7843;
 }
 
 button, .button-dark {
@@ -178,7 +178,7 @@ header nav a::after {
     width: 0px;
     height: 2px;
     display: block;
-    background: #ff00fb;
+    background: #ff7843;
     transition: 0.3s;
     left: 50%;
 }
@@ -204,7 +204,7 @@ header nav li {
     width: 100%;
     height: 2px;
     display: block;
-    background: #cf54cd;
+    background: #ff4376;
     left: 0;
 }
 
@@ -222,12 +222,12 @@ header nav li {
 
 #breadcrumb a {
     text-decoration: underline;
-    text-decoration-color:#cf54cd;
+    text-decoration-color:#ff4376;
     transition: text-decoration-color 0.3s;
 }
 
 #breadcrumb a:hover {
-    text-decoration-color: #ff00fb;
+    text-decoration-color: #ff7843;
 }
 
 /* Header */
@@ -236,7 +236,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     background: 
-        linear-gradient(180deg, rgba(0, 5, 26,10%) 60%, rgb(0, 5, 26) 95%),
+        linear-gradient(180deg, rgba(0, 5, 26,20%) 60%, rgb(0, 5, 26) 95%),
         center / cover no-repeat url('assets/andy.jpeg');
 }
 
@@ -249,7 +249,7 @@ header.compact {
     align-self: flex-end;
     max-width: 230px;
     text-align: right;
-    color: #cf54cd;
+    color: #ff4376;
     font-size: 3rem;
     margin: 0.5rem;
     font-weight: 600;
@@ -373,7 +373,7 @@ section:nth-of-type(1) {
 }
 
 .project-image-overlay a:hover {
-    text-decoration-color: #ff00fb;
+    text-decoration-color: #ff7843;
 }
 
 .project-image-overlay a {
@@ -382,7 +382,7 @@ section:nth-of-type(1) {
     margin: 1rem 0.5rem;
     color: rgba(225, 223, 223, 70%);
     text-align: center;
-    text-decoration-color: #cf54cd;
+    text-decoration-color: #ff4376;
 }
 
 /* Project Detail Page */
@@ -546,13 +546,13 @@ textarea {
 
 input:not([type="submit"]):focus, textarea:focus {
     outline: none;
-    border: 2px solid #cf54cd;
+    border: 2px solid #ff4376;
 }
 
 input[type="submit"] {
     align-self: center;
     padding: 0.5rem 2.5rem;
-    background-color: #cf54cd;
+    background-color: #ff4376;
     color: #e1dfdf;
     font-size: 1rem;
     transition: background-color 0.3s;
@@ -561,7 +561,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     cursor: pointer;
-    background-color: #ff00fb;
+    background-color: #ff7843;
 }
 
 .invalid-input {
