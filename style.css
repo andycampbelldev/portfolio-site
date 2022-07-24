@@ -595,13 +595,7 @@ input[type="submit"]:hover {
 /* Footer */
 
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    color: rgba(225, 223, 223, 0.5);
-}
-
-footer a {
+footer, footer a {
     color: rgba(225, 223, 223, 0.5);
     text-decoration-color: rgba(225, 223, 223, 0.5);
 }
@@ -610,7 +604,7 @@ footer p {
     font-style: italic;
     text-align: right;
     font-size: 0.75rem;
-    margin: 0.5rem 1rem;
+    margin: 0rem 1rem;
 }
 
 /* Desktop */
